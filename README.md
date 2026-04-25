@@ -42,13 +42,21 @@ VelaDev   ❯ Source: create-emulator.md
 
 ## 安装
 
-### 作为 Claude Code / skills.sh Skill 安装
+### 只作为命令行检索工具使用（推荐）
 
 ```bash
-npx skills add CheongSzesuen/VelaDev.skill
+npx vela-dev-skill@latest "怎么创建vela项目"
 ```
 
-### 给 Codex 安装
+### 作为 Claude Code / skills.sh Skill 安装
+
+> 说明：这里的 `skills` 是 skills.sh 的安装器，所以首次执行会提示安装 `skills@...`，这是正常现象。
+
+```bash
+npx --yes skills@latest add CheongSzesuen/VelaDev.skill
+```
+
+### 给 Codex 安装（本地 Skill）
 ```bash
 mkdir -p ~/.codex/skills/veladev
 
@@ -73,11 +81,6 @@ npx vela-dev-skill@latest "<user question>"
 3. **Style**: Be concise and practical. Focus on code examples, steps, or API usage.
 4. **Citation**: If helpful, mention the source file path provided by the CLI.
 EOF
-```
-### 作为命令行检索工具使用
-
-```bash
-npx vela-dev-skill@latest "怎么创建vela项目"
 ```
 
 ---
