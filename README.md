@@ -12,9 +12,6 @@
 
 **一个面向 Xiaomi Vela / QuickApp 的本地文档检索 Skill：把官方文档切片进向量库，问一句就返回最相关的原文片段。**
 
-<br>
-
-[npm 包](https://www.npmjs.com/package/vela-dev-skill)
 
 <br>
 
@@ -122,5 +119,3 @@ VelaDev.skill/
 ├── scripts/            # 文档抓取与排版修复脚本
 └── run_build.py         # 构建向量库入口
 ```
-
----
