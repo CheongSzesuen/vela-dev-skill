@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const axios = require('axios');
-const chalk = require('chalk');
+// 兼容 Chalk v5 (ESM) 和 v4 (CommonJS)
+const chalk = require('chalk').default || require('chalk');
 const { Command } = require('commander');
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
