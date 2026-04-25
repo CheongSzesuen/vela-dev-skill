@@ -1,0 +1,8 @@
+langchain-text-splitters
+langchain-community
+chromadb
+fastembed
+requests
+beautifulsoup4
+html2text
+rich

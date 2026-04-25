@@ -42,3 +42,4 @@ pids
 # IDE
 .vscode/
 .idea/
+doc_vector_db/
