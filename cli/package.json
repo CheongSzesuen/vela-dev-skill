@@ -14,7 +14,7 @@
     "requirements.txt"
   ],
   "scripts": {
-    "prepack": "python3 ../run_build.py && cp -r ../doc_vector_db ./doc_vector_db",
+    "prepack": "cp -r ../doc_vector_db ./doc_vector_db",
     "postpack": "rm -rf ./doc_vector_db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
