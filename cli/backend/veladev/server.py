@@ -22,6 +22,10 @@ class QueryRequest(BaseModel):
     question: str
     k: int = 3
 
+@app.on_event("startup")
+def load_model():
+    get_retriever()
+
 @app.post("/search")
 def search_docs(request: QueryRequest):
     try:

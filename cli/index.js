@@ -188,7 +188,7 @@ program
       const res = await axios.post(`http://127.0.0.1:${PORT}/search`, {
         question: question,
         k: 3
-      }, { timeout: 10000 });
+      }, { timeout: 120000 });
 
       if (res.data.error) {
         console.error(chalk.red('Error:', res.data.error));
