@@ -26,8 +26,6 @@ ENV/
 env/
 .scraper_env/
 
-# Vector Database (重要！)
-doc_vector_db/
 
 # Node.js
 cli/node_modules/
@@ -42,5 +40,4 @@ pids
 # IDE
 .vscode/
 .idea/
-doc_vector_db/
 .codex
