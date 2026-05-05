@@ -122,3 +122,42 @@ VelaDev.skill/
 ├── scripts/            # 文档抓取与排版修复脚本
 └── run_build.py         # 构建向量库入口
 ```
+
+---
+
+## 构建 & 发布
+
+### 构建向量库
+
+```bash
+# 常规构建
+python run_build.py
+
+# 低内存模式（batch 调小，适合配置较低的电脑）
+python run_build.py --batch-size 4 --embed-batch-size 4
+```
+
+构建前先激活虚拟环境并安装依赖：
+
+```bash
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 发布 npm 包
+
+```bash
+# 1. 修改版本号
+cd cli
+# 手动编辑 package.json 里的 "version" 字段
+# 或使用 npm version 自动更新：
+# npm version patch   # 1.0.0 → 1.0.1（小修小改）
+# npm version minor   # 1.0.0 → 1.1.0（新增功能）
+# npm version major   # 1.0.0 → 2.0.0（不兼容改动）
+
+# 2. 确保向量库已构建（doc_vector_db/ 存在且最新）
+python ../run_build.py
+
+# 3. 发布
+npm publish
+```

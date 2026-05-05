@@ -12,7 +12,7 @@ class VelaRetriever:
         if not os.path.isabs(db_path):
             db_path = os.path.abspath(db_path)
             
-        self.embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-zh-v1.5")
+        self.embeddings = FastEmbedEmbeddings(model_name="intfloat/multilingual-e5-large")
         
         if not os.path.exists(db_path):
             raise FileNotFoundError(
